@@ -39,7 +39,9 @@ on:
 jobs:
   build:
     runs-on: windows-latest
-
+    env:
+      O4W_GIT_REPO: ${{ github.repository }}
+      O4W_GIT_BRANCH: ${{ github.ref_name }}
     steps:
     - run: git config --global core.autocrlf input
     - uses: actions/checkout@v4
