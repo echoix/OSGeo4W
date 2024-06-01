@@ -51,7 +51,7 @@ jobs:
         OSGEO4W_CONTINUE_BUILD: ${{ github.event.inputs.continuebuild }}
         OSGEO4W_BUILD_MODE: ${{ github.event.inputs.buildmode }}
         OSGEO4W_SKIP_UPLOAD: 1
-        O4W_REPO: jef-n/osgeo4w
+        O4W_REPO: ${{ github.repository }}
       run: |
         curl -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/%O4W_REPO%/master/bootstrap.cmd>bootstrap.cmd
         curl -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/%O4W_REPO%/master/bootstrap.sh>bootstrap.sh
