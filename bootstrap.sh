@@ -1,6 +1,7 @@
 #!/bin/bash
 
-set -x
+set -x           # set xtrace flag
+export SHELLOPTS # copy all options, including xtrace flag, to environment
 set -e
 
 export PATH=/bin:/usr/bin:$(/bin/cygpath --sysdir)
