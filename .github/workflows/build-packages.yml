@@ -47,7 +47,7 @@ jobs:
       env:
         OSGEO4W_FORCE_BUILD: ${{ github.event.inputs.forcebuild }}
         OSGEO4W_SKIP_TESTS: ${{ github.event.inputs.skiptests }}
-        OSGEO4W_BUILD_RDEPS: ${{ github.event.inputs.buildreps }}
+        OSGEO4W_BUILD_RDEPS: ${{ github.event.inputs.buildrdeps }}
         OSGEO4W_SKIP_MASTER_REPO: ${{ github.event.inputs.skipmasterrepo }}
         OSGEO4W_CONTINUE_BUILD: ${{ github.event.inputs.continuebuild }}
         OSGEO4W_BUILD_MODE: ${{ github.event.inputs.buildmode }}
