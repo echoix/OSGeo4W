@@ -52,9 +52,9 @@ jobs:
         OSGEO4W_BUILD_MODE: ${{ github.event.inputs.buildmode }}
         OSGEO4W_SKIP_UPLOAD: 1
         O4W_REPO: ${{ github.repository }}
+        # curl -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/%O4W_REPO%/master/bootstrap.cmd>bootstrap.cmd
+        # curl -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/%O4W_REPO%/master/bootstrap.sh>bootstrap.sh
       run: |
-        curl -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/%O4W_REPO%/master/bootstrap.cmd>bootstrap.cmd
-        curl -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/%O4W_REPO%/master/bootstrap.sh>bootstrap.sh
         call bootstrap.cmd ${{ github.event.inputs.packages }}
 
     - uses: actions/upload-artifact@v4
